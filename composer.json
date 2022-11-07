@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "drupal/search_api": "^1.27"
+    "drupal/search_api": "^1.27",
+    "dataweb1/bo": "^2.0@alpha"
   },
   "license": "GPL-2.0-or-later",
   "authors": [
