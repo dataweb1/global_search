@@ -8,3 +8,4 @@ package: dw
 dependencies:
   - dataweb1:bo
   - drupal:search_api
+  - drupal:search_api_db
