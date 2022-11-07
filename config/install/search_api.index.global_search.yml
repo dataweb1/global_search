@@ -1,0 +1,134 @@
+uuid: acd31170-73f0-4be9-a1b5-9938b6bf93ed
+langcode: nl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.bo.field_text
+    - search_api.server.database_search
+  module:
+    - node
+    - search_api
+    - bo
+id: global_search
+name: 'Global Search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  field_text:
+    label: Tekst
+    datasource_id: 'entity:bo'
+    property_path: field_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.bo.field_text
+  title:
+    label: Titel
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:bo':
+    bundles:
+      default: true
+      selected:
+        - accordion
+        - accordion_item
+        - activity
+        - article
+        - buttons
+        - card
+        - cards
+        - cta_card
+        - cta_cards
+        - cta_full
+        - footer
+        - ggl_map
+        - google_map
+        - grid
+        - header
+        - image_zoom
+        - partner
+        - partners
+        - popup
+        - section
+        - social
+        - socials
+        - tab
+        - table
+        - table_row
+        - tabs
+        - timeline
+        - webform
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<b>'
+    suffix: '</b>'
+    excerpt: false
+    excerpt_always: false
+    excerpt_length: 500
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: true
+  html_filter:
+    weights:
+      preprocess_index: -50
+      preprocess_query: -48
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - title
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
+  ignorecase:
+    weights:
+      preprocess_index: -49
+      preprocess_query: -47
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - title
+  language_with_fallback: {  }
+  rendered_item: {  }
+  reverse_entity_references: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: database_search

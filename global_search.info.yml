@@ -1,0 +1,10 @@
+name: Global Search
+type: module
+description: Global Search view (Search API index on BO elements + content types).
+core_version_requirement: ^8 || ^9
+package: dw
+
+# Dependencies
+dependencies:
+  - dataweb1:bo
+  - drupal:search_api

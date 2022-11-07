@@ -1,0 +1,14 @@
+uuid: afa17e74-2e98-49f2-8936-593528f1d9b3
+langcode: nl
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database_search
+name: 'Database Search'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: partial

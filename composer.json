@@ -1,0 +1,23 @@
+{
+  "name": "dataweb1/global_search",
+  "description": "Global Search view (Search API index on BO elements + content types).",
+  "type": "drupal-module",
+  "homepage": "https://github.com/dataweb1/global_search",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {
+    "drupal/search_api": "^1.27"
+  },
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Bert Jansen",
+      "email": "bert@data-web.be",
+      "role": "Owner"
+    }
+  ]
+}

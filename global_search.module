@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+function global_search_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  // Search form.
+  if ($form_id == 'views_exposed_form') {
+    $form['actions']['submit']['#value'] = t("Search");
+
+    $form['zoekwoord']['#default_value'] = \Drupal::request()->query->get('zoekwoord');
+    $form['zoekwoord']['#required'] = TRUE;
+  }
+
+}
